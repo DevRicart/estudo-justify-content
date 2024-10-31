@@ -6,6 +6,9 @@ var spaceAround = document.getElementById("space-around");
 var spaceBetween = document.getElementById("space-between");
 var spaceEvenly = document.getElementById("space-evenly");
 var flexWrap = document.getElementById("flex-wrap");
+
+var startExp = document.getElementsByClassName("start-exp")[0];
+
 const buttons = document.querySelectorAll(".btn");
 const classeFixa = ["flex-wrap"];
 
@@ -18,6 +21,16 @@ flexStart.addEventListener("click", () => {
     flexWrap.classList.add("flex-start")
     removerActive();
     flexStart.classList.add("active")
+});
+
+flexStart.addEventListener("mouseover", () => {
+    startExp.classList.add("visible");
+    startExp.classList.remove("invisible");
+})
+
+flexStart.addEventListener("mouseout", () => {
+    startExp.classList.add("invisible");
+    startExp.classList.remove("visible");
 });
 
 center.addEventListener("click", () => {

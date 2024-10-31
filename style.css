@@ -32,12 +32,55 @@ h2 {
 
 .buttons {
     display: flex;
-    width: 100vw;
+    width: 100%;
     justify-content: space-around;
 
     position: absolute;
     bottom: 0;
     margin-bottom: 50px;
+}
+
+.invisible {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.explanations p { 
+    background: #fff; 
+    padding: 10px; 
+    position: absolute;
+    left: 82px;
+    bottom: 115px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1;
+}
+
+.explanations p:before { 
+    content: ''; 
+    position: absolute; 
+    width: 20px; 
+    height: 20px; 
+    Left: 60px; 
+    top: 46px; 
+    background: #fff; 
+    transform: rotate(45deg);
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: black;
+}
+
+.column {
+    flex-direction: column;
 }
 
 .buttons .btn {
